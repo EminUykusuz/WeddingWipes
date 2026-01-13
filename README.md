@@ -1,236 +1,239 @@
-# 🎉 Wedding Wipes - Gepersonaliseerde Vochtige Doekjes
+# 🎉 Wedding Wipes - Kişiselleştirilmiş Islak Mendiller
 
-Premium gepersonaliseerde vochtige doekjes website gebouwd met Next.js 16. Luxe bedrukte vochtige doekjes met uw logo voor bruiloften, restaurants, hotels en evenementen.
+Next.js 16 ile oluşturulmuş premium kişiselleştirilmiş ıslak mendiller web sitesi. Düğünler, restoranlar, oteller ve etkinlikler için logonuzla lüks baskılı ıslak mendiller.
 
 ![Wedding Wipes](public/logo.jpg)
 
-## ✨ Kenmerken
+## ✨ Özellikler
 
-- 🎨 **Volledig Gepersonaliseerd** - Upload uw logo en ontwerp
-- 🌐 **Volledig Nederlandstalig** - Complete Dutch/Flemish localisatie
-- 📱 **WhatsApp Integratie** - Direct contact via WhatsApp
-- 🎭 **Smooth Animaties** - Framer Motion animaties
-- 🔍 **SEO Geoptimaliseerd** - Robots.txt, Sitemap, Meta tags
-- 📊 **Responsive Design** - Mobiel en desktop vriendelijk
-- 🎯 **Section Navigation** - Smooth scroll naar secties
-- 📄 **Legal Pages** - Privacy en Voorwaarden pagina's
+- 🎨 **Tamamen Kişiselleştirilmiş** - Logonuzu yükleyin ve tasarlayın
+- 🌐 **Tamamen Flemenkçe** - Komple Hollandaca/Flamanca yerelleştirme
+- 📱 **WhatsApp Entegrasyonu** - WhatsApp üzerinden direkt iletişim
+- 🎭 **Yumuşak Animasyonlar** - Framer Motion animasyonları
+- 🔍 **SEO Optimize** - Robots.txt, Sitemap, Meta etiketleri
+- 📊 **Responsive Tasarım** - Mobil ve masaüstü dostu
+- 🎯 **Bölüm Navigasyonu** - Bölümlere yumuşak kaydırma
+- 📄 **Yasal Sayfalar** - Gizlilik ve Şartlar sayfaları
 
-## 🛠️ Technologieën
+## 🛠️ Teknolojiler
 
 - **Framework:** Next.js 16.1.1 (React 19)
-- **Styling:** Inline CSS met CSS Variables
-- **Animaties:** Framer Motion
-- **TypeScript:** Type-safe development
+- **Stillendirme:** CSS Variables ile Inline CSS
+- **Animasyonlar:** Framer Motion
+- **TypeScript:** Tip güvenli geliştirme
 - **Font:** Google Fonts (Geist Sans, Geist Mono)
 
-## 📦 Installatie
+## 📦 Kurulum
 
-### Vereisten
+### Gereksinimler
 
-- Node.js 18+ geïnstalleerd
-- npm of yarn package manager
+- Node.js 18+ kurulu
+- npm veya yarn paket yöneticisi
 
-## Getting Started
+## Başlarken
 
-First, run the development server:
+İlk olarak, geliştirme sunucusunu çalıştırın:
 
 ```bash
 npm run dev
-# or
+# veya
 yarn dev
-# or
+# veya
 pnpm dev
-# or
+# veya
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Sonucu görmek için tarayıcınızda [http://localhost:3000](http://localhost:3000) adresini açın.
 
 ## 🚀 Production Build
 
 ```bash
-# Build voor productie
 npm run build
-
-# Start productie server
-npm start
+npm run start
 ```
 
-## 📁 Project Structuur
+## 📁 Proje Yapısı
 
 ```
 wedding-wypes/
 ├── public/
-│   ├── logo.jpg
-│   ├── robots.txt
-│   └── images/
+│   ├── logo.jpg                    # Şirket logosu
+│   ├── robots.txt                  # SEO robots yapılandırması
+│   └── whychooseus/               # Slayt gösterim görselleri
+│       ├── wetwipes1.png
+│       └── wetwipes2.png
 ├── src/
 │   ├── app/
-│   │   ├── layout.tsx          # Root layout met SEO
-│   │   ├── page.tsx            # Homepage
-│   │   ├── sitemap.ts          # Dynamic sitemap
-│   │   ├── privacy/
-│   │   │   └── page.tsx        # Privacy pagina
-│   │   └── voorwaarden/
-│   │       └── page.tsx        # Voorwaarden pagina
+│   │   ├── layout.tsx             # SEO metadata ile root layout
+│   │   ├── page.tsx               # Ana sayfa
+│   │   ├── globals.css            # Global stiller + mobil yardımcılar
+│   │   ├── sitemap.ts             # Dinamik sitemap oluşturucu
+│   │   ├── privacy/               # Gizlilik politikası sayfası
+│   │   │   └── page.tsx
+│   │   └── voorwaarden/           # Şartlar ve koşullar
+│   │       └── page.tsx
 │   └── components/
-│       ├── TopBar.tsx          # Top bar met aanbieding
-│       ├── Navbar.tsx          # Navigation met smooth scroll
-│       ├── Hero.tsx            # Hero sectie
-│       ├── ProductShowcase.tsx # Product weergave
-│       ├── SolutionsSection.tsx# Oplossingen
-│       ├── UsageFeatures.tsx   # Gebruiksdoeleinden
-│       ├── FeaturesGrid.tsx    # Features grid
-│       ├── WhyChooseUs.tsx     # Waarom ons (slideshow)
-│       ├── CustomizationSection.tsx
-│       ├── FAQSection.tsx      # Accordion FAQ
-│       ├── Footer.tsx          # Footer met links
-│       └── WhatsAppButton.tsx  # Floating WhatsApp knop
-├── package.json
-├── tsconfig.json
-└── next.config.ts
+│       ├── Navbar.tsx             # Hamburger menülü responsive navbar
+│       ├── TopBar.tsx             # İletişim bilgi çubuğu
+│       ├── Hero.tsx               # Hero bölümü
+│       ├── ProductShowcase.tsx    # Ürün grid
+│       ├── CustomizationSection.tsx # Özelleştirme bilgisi
+│       ├── WhyChooseUs.tsx        # Avantajlar + slayt gösterimi
+│       ├── SolutionsSection.tsx   # Çözümler grid
+│       ├── UsageFeatures.tsx      # Kullanım sekmeleri
+│       ├── FeaturesGrid.tsx       # Özellik kartları
+│       ├── FAQSection.tsx         # Akordeon SSS
+│       ├── Footer.tsx             # SVG ikonlu footer
+│       ├── WhatsAppButton.tsx     # Sabit WhatsApp butonu
+│       └── SmoothScroll.tsx       # Lenis scroll wrapper
+├── next.config.ts                 # Next.js yapılandırması
+├── tailwind.config.ts            # Tailwind yapılandırması
+└── tsconfig.json                 # TypeScript yapılandırması
 ```
 
-## 🎨 Kleuren Schema
+## 🎨 Renk Şeması
 
 ```css
---color-gold: #cdac00      /* Primary gold */
---color-purple: #2e2a5b    /* Secondary purple */
---color-green: #a3c44c     /* Accent green */
---color-gray: #808080      /* Footer background */
+:root {
+  --color-gold: #cdac00      /* Ana altın renk */
+  --color-purple: #2e2a5b    /* Koyu mor */
+  --color-green: #a3c44c     /* Açık yeşil */
+  --color-gray: #808080      /* Footer arka plan */
+}
 ```
 
-## 📞 Contact Configuratie
+## 📞 İletişim Yapılandırması
 
-WhatsApp nummer: `+31 6 27141526`
+WhatsApp numarası: `+31 6 27141526`
 Email: `info@weddingwipes.nl`
 
-### WhatsApp Links Aanpassen
+### WhatsApp Linklerini Düzenleme
 
-Zoek en vervang in alle componenten:
+Tüm bileşenlerde arayın ve değiştirin:
 ```tsx
 href="https://wa.me/31627141526?text=Hallo%20Wedding%20Wipes%20ik%20wil%20graag%20meer%20informatie"
 ```
 
-## 🔧 Configuratie
+## 🔧 Yapılandırma
 
 ### SEO & Metadata
 
-Edit `src/app/layout.tsx` voor:
-- Site title
-- Meta beschrijving
-- Keywords
-- Open Graph tags
-- Google verificatie code
+`src/app/layout.tsx` dosyasını düzenleyin:
+- Site başlığı
+- Meta açıklaması
+- Anahtar kelimeler
+- Open Graph etiketleri
+- Google doğrulama kodu
 
 ### Sitemap
 
-Edit `src/app/sitemap.ts` voor:
-- Base URL aanpassen
-- Nieuwe pagina's toevoegen
-- Update frequentie wijzigen
+`src/app/sitemap.ts` dosyasını düzenleyin:
+- Base URL'yi ayarlayın
+- Yeni sayfalar ekleyin
+- Güncelleme sıklığını değiştirin
 
-### Domain Instelling
+### Domain Ayarı
 
-Update in de volgende bestanden:
+Aşağıdaki dosyalarda güncelleyin:
 - `src/app/sitemap.ts` - baseUrl
 - `public/robots.txt` - Sitemap URL
 
-## 🎯 Features Uitleg
+## 🎯 Özellikler Açıklaması
 
-### Slideshow (WhyChooseUs)
-- Auto-change elke 5 seconden
-- Fade animaties tussen afbeeldingen
-- Dual image overlay om white flash te voorkomen
+### Slayt Gösterimi (WhyChooseUs)
+- Her 5 saniyede otomatik değişim
+- Görseller arası fade animasyonları
+- Beyaz flaşı önlemek için çift görsel overlay
 
-### Accordion FAQ
-- AnimatePresence voor smooth animations
-- Height en opacity transitions
-- Icon rotatie bij open/close
+### Akordeon SSS
+- Yumuşak animasyonlar için AnimatePresence
+- Height ve opacity geçişleri
+- Açma/kapatmada ikon döndürme
 
-### Smooth Scroll
-- Lenis smooth scroll library
-- Navbar links naar section IDs
-- Smooth user experience
+### Yumuşak Kaydırma
+- Lenis smooth scroll kütüphanesi
+- Navbar linkleri section ID'lerine bağlı
+- Yumuşak kullanıcı deneyimi
 
-### WhatsApp Integratie
-- Floating button rechtsonder
-- Direct contact buttons door heel de site
-- Pre-filled message
+### WhatsApp Entegrasyonu
+- Sağ altta sabit buton
+- Site genelinde direkt iletişim butonları
+- Önceden doldurulmuş mesaj
 
-## 📝 Aanpassingen Maken
+## 📝 Değişiklik Yapma
 
-### Nieuwe Section Toevoegen
+### Yeni Bölüm Ekleme
 
-1. Maak component in `src/components/`
-2. Voeg toe aan `src/app/page.tsx`
-3. Voeg ID toe voor navigation
-4. Update Navbar links
+1. `src/components/` içinde bileşen oluşturun
+2. `src/app/page.tsx` dosyasına ekleyin
+3. Navigasyon için ID ekleyin
+4. Navbar linklerini güncelleyin
 
-### Kleuren Aanpassen
+### Renkleri Değiştirme
 
-Edit `src/app/globals.css`:
+`src/app/globals.css` dosyasını düzenleyin:
 ```css
 :root {
-  --color-gold: #jouwkleur;
+  --color-gold: #sizinrenginiz;
 }
 ```
 
-### Logo Vervangen
+### Logo Değiştirme
 
-Replace `public/logo.jpg` met uw logo
+`public/logo.jpg` dosyasını logonuzla değiştirin
 
-## 🐛 Troubleshooting
+## 🐛 Sorun Giderme
 
-### Port 3000 al in gebruik?
+### Port 3000 zaten kullanımda mı?
 ```bash
-# Gebruik andere port
+# Başka bir port kullanın
 npm run dev -- -p 3001
 ```
 
-### Build errors?
+### Build hataları?
 ```bash
-# Clear cache en rebuild
+# Cache'i temizle ve yeniden derle
 rm -rf .next
 npm run build
 ```
 
-## 📄 Licentie
+## 📄 Lisans
 
-© 2026 Wedding Wipes | Alle Rechten Voorbehouden
+© 2026 Wedding Wipes | Tüm Hakları Saklıdır
 
-## 👨‍💻 Developer
+## 👨‍💻 Geliştirici
 
-Ontwikkeld door [Emin Uykusuz](https://github.com/EminUykusuz)
+[Emin Uykusuz](https://github.com/EminUykusuz) tarafından geliştirildi
 
-## 🤝 Contributing
+## 🤝 Katkıda Bulunma
 
-Pull requests zijn welkom. Voor grote wijzigingen, open eerst een issue om te bespreken wat u wilt wijzigen.
+Pull request'ler kabul edilir. Büyük değişiklikler için, lütfen önce neyi değiştirmek istediğinizi tartışmak için bir issue açın.
 
-## 📞 Support
+## 📞 Destek
 
-Voor vragen of ondersteuning:
+Sorularınız veya destek için:
 - 📧 Email: info@weddingwipes.nl
 - 📱 WhatsApp: +31 6 27141526
-- 🐙 GitHub Issues: [Create an issue](https://github.com/EminUykusuz/WeddingWipes/issues)
+- 🐙 GitHub Issues: [Issue oluştur](https://github.com/EminUykusuz/WeddingWipes/issues)
 
 ---
 
-⭐ Als dit project nuttig is, geef het een ster op GitHub!
+⭐ Bu proje faydalıysa, GitHub'da yıldız verin!
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Bu proje, [Geist](https://vercel.com/font) adlı yeni Vercel font ailesini otomatik olarak optimize etmek ve yüklemek için [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) kullanır.
 
-## Learn More
+## Daha Fazla Bilgi
 
-To learn more about Next.js, take a look at the following resources:
+Next.js hakkında daha fazla bilgi edinmek için aşağıdaki kaynaklara göz atın:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- [Next.js Dokümantasyonu](https://nextjs.org/docs) - Next.js özellikleri ve API hakkında bilgi edinin.
+- [Next.js Öğren](https://nextjs.org/learn) - interaktif Next.js eğitimi.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+[Next.js GitHub deposuna](https://github.com/vercel/next.js) göz atabilirsiniz - geri bildirimleriniz ve katkılarınız memnuniyetle karşılanır!
 
-## Deploy on Vercel
+## Vercel'de Deploy
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Next.js uygulamanızı deploy etmenin en kolay yolu, Next.js'in yaratıcılarından [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme)'u kullanmaktır.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Daha fazla bilgi için [Next.js deployment dokümantasyonuna](https://nextjs.org/docs/app/building-your-application/deploying) göz atın.
