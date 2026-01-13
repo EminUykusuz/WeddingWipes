@@ -7,13 +7,13 @@ export default function SolutionsSection() {
         maxWidth: '1200px',
         margin: '0 auto',
         display: 'grid',
-        gridTemplateColumns: '1fr 1fr',
+        gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
         gap: '3rem',
         alignItems: 'center'
       }}>
         <div>
           <h2 style={{
-            fontSize: '2.3rem',
+            fontSize: 'clamp(1.75rem, 4vw, 2.3rem)',
             fontWeight: 800,
             marginBottom: '2.5rem',
             color: 'var(--color-gray-dark)'

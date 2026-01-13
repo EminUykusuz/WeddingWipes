@@ -5,8 +5,8 @@ export default function TopBar() {
     <div style={{
       background: '#cdac00',
       color: '#fff',
-      padding: '0.75rem 1.5rem',
-      fontSize: '0.85rem',
+      padding: '0.75rem 1rem',
+      fontSize: 'clamp(0.7rem, 2vw, 0.85rem)',
       textAlign: 'center',
       fontWeight: 600
     }}>

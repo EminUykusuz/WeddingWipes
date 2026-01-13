@@ -22,7 +22,7 @@ export default function Hero() {
       backgroundPosition: 'center',
       backgroundRepeat: 'no-repeat',
       color: '#fff',
-      padding: '6rem 1.5rem 10rem',
+      padding: '4rem 1rem 8rem',
       position: 'relative',
       overflow: 'hidden'
     }}>
@@ -44,7 +44,7 @@ export default function Hero() {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        minHeight: '500px'
+        minHeight: '400px'
       }}>
         <motion.div
           initial="hidden"
@@ -68,7 +68,7 @@ export default function Hero() {
           </motion.div>
           <motion.h1
             style={{
-              fontSize: '3.5rem',
+              fontSize: 'clamp(2rem, 5vw, 3.5rem)',
               fontWeight: 800,
               marginBottom: '1.5rem',
               lineHeight: 1.15,
@@ -80,10 +80,11 @@ export default function Hero() {
           </motion.h1>
           <motion.p
             style={{
-              fontSize: '1.1rem',
+              fontSize: 'clamp(0.95rem, 2vw, 1.1rem)',
               marginBottom: '2.5rem',
               lineHeight: 1.8,
-              color: 'rgba(255,255,255,0.95)'
+              color: 'rgba(255,255,255,0.95)',
+              padding: '0 1rem'
             }}
             variants={fadeInUp}
           >
@@ -95,8 +96,8 @@ export default function Hero() {
             rel="noopener noreferrer"
             className="btn-gold"
             style={{
-              fontSize: '1rem',
-              padding: '1rem 2.5rem',
+              fontSize: 'clamp(0.9rem, 2vw, 1rem)',
+              padding: 'clamp(0.8rem, 2vw, 1rem) clamp(1.5rem, 4vw, 2.5rem)',
               fontWeight: 600,
               border: 'none',
               borderRadius: '8px',

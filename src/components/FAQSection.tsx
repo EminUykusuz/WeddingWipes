@@ -23,7 +23,7 @@ export default function FAQSection() {
     <section id="faq" style={{ padding: '5rem 1.5rem', background: '#fff' }}>
       <div className="container" style={{ maxWidth: '1200px', margin: '0 auto' }}>
         <h2 style={{
-          fontSize: '2.3rem',
+          fontSize: 'clamp(1.75rem, 4vw, 2.3rem)',
           fontWeight: 800,
           marginBottom: '3rem',
           color: 'var(--color-gray-dark)',
@@ -45,7 +45,7 @@ export default function FAQSection() {
               transition={{ duration: 0.3, delay: idx * 0.1 }}
               style={{
                 background: 'var(--color-gray-light)',
-                padding: '2rem',
+                padding: 'clamp(1rem, 3vw, 2rem)',
                 borderRadius: '12px',
                 borderLeft: '4px solid var(--color-gold)',
                 cursor: 'pointer',

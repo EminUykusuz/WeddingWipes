@@ -35,7 +35,7 @@ export default function WhyChooseUs() {
       <div style={{ background: '#e8d4b8', padding: '5rem 1.5rem' }}>
         <div className="container" style={{ maxWidth: '1200px', margin: '0 auto' }}>
           <h2 style={{
-            fontSize: '2.3rem',
+            fontSize: 'clamp(1.75rem, 4vw, 2.3rem)',
             fontWeight: 800,
             marginBottom: '1rem',
             color: 'var(--color-purple)',
@@ -45,7 +45,7 @@ export default function WhyChooseUs() {
           </h2>
           <div style={{
             display: 'grid',
-            gridTemplateColumns: '1fr 1fr',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
             gap: '3rem',
             alignItems: 'center',
             marginTop: '3rem'

@@ -113,6 +113,27 @@ button {
   h2 {
     font-size: 1.5rem;
   }
+  
+  .container {
+    padding: 0 1rem;
+  }
+  
+  /* Mobile utility classes */
+  .mobile-hidden {
+    display: none !important;
+  }
+  
+  .mobile-column {
+    flex-direction: column !important;
+  }
+  
+  .mobile-text-center {
+    text-align: center !important;
+  }
+  
+  .mobile-full-width {
+    width: 100% !important;
+  }
 }
 
 :root {

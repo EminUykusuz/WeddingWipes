@@ -30,11 +30,11 @@ export default function CustomizationSection() {
             }}
             whileHover={{ scale: 1.05 }}
           >
-            ✨ Tamamen Özelleştirilebilir
+            ✨ Volledig Aanpasbaar
           </motion.div>
           <h2
             style={{
-              fontSize: "3rem",
+              fontSize: "clamp(1.75rem, 5vw, 3rem)",
               fontWeight: 900,
               marginBottom: "1.5rem",
               color: "var(--color-purple)",
@@ -58,8 +58,8 @@ export default function CustomizationSection() {
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "1fr 1fr",
-            gap: "4rem",
+            gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+            gap: "3rem",
             alignItems: "center",
           }}
         >
@@ -111,7 +111,7 @@ export default function CustomizationSection() {
                 }}
               >
                 <span style={{ fontSize: "1.2rem" }}>✏️</span>
-                100% Özelleştirilebilir
+                100% Aanpasbaar
               </motion.div>
             </div>
           </motion.div>
@@ -295,7 +295,7 @@ export default function CustomizationSection() {
               whileHover={{ scale: 1.03, boxShadow: "0 12px 32px rgba(255, 215, 0, 0.5)" }}
               whileTap={{ scale: 0.98 }}
             >
-              Hemen Tasarımınızı Oluşturun →
+              Begin Nu Met Uw Ontwerp →
             </motion.button>
           </motion.div>
         </div>

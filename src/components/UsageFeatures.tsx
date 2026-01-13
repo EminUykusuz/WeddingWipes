@@ -17,7 +17,7 @@ export default function UsageFeatures() {
   };
 
   return (
-    <section style={{ padding: '4rem 2rem', backgroundColor: '#f8fafc', minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+    <section style={{ padding: 'clamp(2rem, 5vw, 4rem) clamp(1rem, 3vw, 2rem)', backgroundColor: '#f8fafc', minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
       
       <motion.div
         layout
@@ -43,7 +43,7 @@ export default function UsageFeatures() {
         <div style={{ position: 'absolute', bottom: '-10%', right: '-10%', width: '500px', height: '500px', background: 'rgba(255,255,255,0.05)', borderRadius: '50%', filter: 'blur(100px)', pointerEvents: 'none' }} />
 
         {/* İÇERİK ALANI (Flex Row yapısı: Sol Foto - Sağ Yazı) */}
-        <div style={{ flex: 1, position: 'relative', zIndex: 10, padding: '3rem', display: 'flex', alignItems: 'center' }}>
+        <div style={{ flex: 1, position: 'relative', zIndex: 10, padding: 'clamp(1.5rem, 4vw, 3rem)', display: 'flex', alignItems: 'center' }}>
           
           <AnimatePresence mode="wait">
             
@@ -60,7 +60,7 @@ export default function UsageFeatures() {
                     <div style={{ position: 'absolute', inset: 0, background: 'rgba(255,255,255,0.2)', borderRadius: '50%', filter: 'blur(40px)', transform: 'scale(0.9)' }}></div>
                     <img 
                       src="/product-stack.png" 
-                      alt="Teknik Özellikler" 
+                      alt="Technische Specificaties" 
                       style={{ position: 'relative', width: '100%', maxWidth: '450px', height: 'auto', filter: 'drop-shadow(0 25px 50px rgba(0,0,0,0.4))' }}
                     />
                   </div>
@@ -71,10 +71,10 @@ export default function UsageFeatures() {
                   initial={{ opacity: 0, x: 50 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: 50 }} transition={{ duration: 0.5, delay: 0.2 }}
                   style={{ flex: 1, minWidth: '300px', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '1.5rem' }}
                 >
-                  <SpecCard title="60gr/m²" sub="Premium Doku" icon={<Layers size={24} />} delay={0.1} />
-                  <SpecCard title="3 Yıl Raf Ömrü" sub="Tazeliğini Korur" icon={<RotateCcw size={24} />} delay={0.2} />
-                  <SpecCard title="30x25cm" sub="İdeal Boyut" icon={<ScanLine size={24} />} delay={0.3} />
-                  <SpecCard title="Gıda Uyumlu" sub="Güvenli Ambalaj" icon={<CheckCircle2 size={24} />} delay={0.4} />
+                  <SpecCard title="60gr/m²" sub="Premium Textuur" icon={<Layers size={24} />} delay={0.1} />
+                  <SpecCard title="3 Jaar Houdbaarheid" sub="Blijft Vers" icon={<RotateCcw size={24} />} delay={0.2} />
+                  <SpecCard title="30x25cm" sub="Ideale Maat" icon={<ScanLine size={24} />} delay={0.3} />
+                  <SpecCard title="Voedselveilig" sub="Veilige Verpakking" icon={<CheckCircle2 size={24} />} delay={0.4} />
                 </motion.div>
 
               </div>
@@ -85,8 +85,8 @@ export default function UsageFeatures() {
               <ContentLayout 
                 key="warm"
                 imageSrc="/warm-wipes.png"
-                title="Sıcak Kullanım"
-                desc="Mikrodalgada sadece 10 saniye ısıtarak lüks bir sıcak havlu deneyimi sunun. Restoranlarda başlangıç servisi için idealdir."
+                title="Warm Gebruik"
+                desc="Verwarm slechts 10 seconden in de magnetron voor een luxe warme handdoek ervaring. Ideaal voor voorafjes in restaurants."
               />
             )}
 
@@ -95,8 +95,8 @@ export default function UsageFeatures() {
               <ContentLayout 
                 key="cold"
                 imageSrc="/cold-wipes.png"
-                title="Soğuk Kullanım"
-                desc="Buzdolabında saklayarak yaz aylarında ferahlatıcı bir serinlik sunun. Alkol içermeyen formülüyle cildi kurutmadan serinletir."
+                title="Koud Gebruik"
+                desc="Bewaar in de koelkast voor een verfrissende koelte in de zomermaanden. Alcoholvrije formule die de huid niet uitdroogt."
               />
             )}
 
@@ -109,11 +109,11 @@ export default function UsageFeatures() {
           background: 'rgba(255,255,255,0.1)', backdropFilter: 'blur(20px)', borderTop: '1px solid rgba(255,255,255,0.2)',
           padding: '1.5rem', display: 'flex', justifyContent: 'center', gap: '4rem'
         }}>
-           <TabButton isActive={activeTab === 'warm'} onClick={() => setActiveTab('warm')} label="Sıcak" icon={<ThermometerSun size={28} />} />
+           <TabButton isActive={activeTab === 'warm'} onClick={() => setActiveTab('warm')} label="Warm" icon={<ThermometerSun size={28} />} />
            <div style={{ width: '1px', height: '50px', background: 'rgba(255,255,255,0.2)' }}></div>
-           <TabButton isActive={activeTab === 'cold'} onClick={() => setActiveTab('cold')} label="Soğuk" icon={<Snowflake size={28} />} />
+           <TabButton isActive={activeTab === 'cold'} onClick={() => setActiveTab('cold')} label="Koud" icon={<Snowflake size={28} />} />
            <div style={{ width: '1px', height: '50px', background: 'rgba(255,255,255,0.2)' }}></div>
-           <TabButton isActive={activeTab === 'specs'} onClick={() => setActiveTab('specs')} label="Teknik" icon={<ScanLine size={28} />} />
+           <TabButton isActive={activeTab === 'specs'} onClick={() => setActiveTab('specs')} label="Technisch" icon={<ScanLine size={28} />} />
         </div>
 
       </motion.div>

@@ -4,6 +4,7 @@ import { useState } from 'react';
 
 export default function Navbar() {
   const [hoveredLink, setHoveredLink] = useState<string | null>(null);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const linkStyle = (linkName: string) => ({
     color: hoveredLink === linkName ? '#cdac00' : '#2e2a5b',
@@ -52,14 +53,16 @@ export default function Navbar() {
             src="/logo.jpg"
             alt="Wedding Wypes Logo"
             style={{
-              height: '80px',
+              height: '60px',
               width: 'auto',
               objectFit: 'contain',
               borderRadius: '8px'
             }}
           />
         </div>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '3rem' }}>
+
+        {/* Desktop Menu */}
+        <div className="mobile-hidden" style={{ display: 'flex', alignItems: 'center', gap: '3rem' }}>
           <a 
             href="#products" 
             style={linkStyle('products')}
@@ -108,7 +111,114 @@ export default function Navbar() {
             </button>
           </a>
         </div>
+
+        {/* Mobile Menu Button */}
+        <button
+          className="mobile-visible"
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          style={{
+            display: 'none',
+            background: 'none',
+            border: 'none',
+            fontSize: '1.5rem',
+            cursor: 'pointer',
+            color: '#2e2a5b',
+            padding: '0.5rem',
+          }}
+        >
+          {mobileMenuOpen ? '✕' : '☰'}
+        </button>
       </div>
+
+      {/* Mobile Menu */}
+      {mobileMenuOpen && (
+        <div
+          className="mobile-visible"
+          style={{
+            display: 'none',
+            flexDirection: 'column',
+            gap: '1rem',
+            marginTop: '1rem',
+            padding: '1rem 0',
+            borderTop: '1px solid #e5e5e5',
+          }}
+        >
+          <a 
+            href="#products" 
+            onClick={() => setMobileMenuOpen(false)}
+            style={{
+              color: '#2e2a5b',
+              textDecoration: 'none',
+              fontWeight: 600,
+              fontSize: '1rem',
+              padding: '0.5rem 0',
+            }}
+          >
+            Producten
+          </a>
+          <a 
+            href="#solutions" 
+            onClick={() => setMobileMenuOpen(false)}
+            style={{
+              color: '#2e2a5b',
+              textDecoration: 'none',
+              fontWeight: 600,
+              fontSize: '1rem',
+              padding: '0.5rem 0',
+            }}
+          >
+            Oplossingen
+          </a>
+          <a 
+            href="#why" 
+            onClick={() => setMobileMenuOpen(false)}
+            style={{
+              color: '#2e2a5b',
+              textDecoration: 'none',
+              fontWeight: 600,
+              fontSize: '1rem',
+              padding: '0.5rem 0',
+            }}
+          >
+            Waarom Wij
+          </a>
+          <a 
+            href="#faq" 
+            onClick={() => setMobileMenuOpen(false)}
+            style={{
+              color: '#2e2a5b',
+              textDecoration: 'none',
+              fontWeight: 600,
+              fontSize: '1rem',
+              padding: '0.5rem 0',
+            }}
+          >
+            FAQ
+          </a>
+          <a href="https://wa.me/31627141526?text=Hallo%20Wedding%20Wipes%20ik%20wil%20graag%20meer%20informatie">
+            <button
+              style={{
+                ...buttonStyle,
+                width: '100%',
+                marginTop: '0.5rem',
+              }}
+            >
+              Bestel Monster
+            </button>
+          </a>
+        </div>
+      )}
+
+      <style jsx>{`
+        @media (max-width: 768px) {
+          .mobile-hidden {
+            display: none !important;
+          }
+          .mobile-visible {
+            display: flex !important;
+          }
+        }
+      `}</style>
     </nav>
   );
 }
