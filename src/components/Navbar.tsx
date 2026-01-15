@@ -85,7 +85,7 @@ export default function Navbar() {
             onMouseEnter={() => setHoveredLink('why')}
             onMouseLeave={() => setHoveredLink(null)}
           >
-            Waarom Wij
+            Waarom wij
           </a>
           <a 
             href="#faq" 
@@ -107,7 +107,7 @@ export default function Navbar() {
                 e.currentTarget.style.boxShadow = '0 4px 15px rgba(205, 172, 0, 0.3)';
               }}
             >
-              Bestel Monster
+              Contacteer Ons
             </button>
           </a>
         </div>

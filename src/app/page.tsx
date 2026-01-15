@@ -23,7 +23,6 @@ export default function Home() {
       <Hero />
       <ProductShowcase />
       <SolutionsSection />
-      <UsageFeatures />
       <FeaturesGrid />
       <WhyChooseUs />
       <CustomizationSection />

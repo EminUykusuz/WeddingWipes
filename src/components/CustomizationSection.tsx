@@ -302,7 +302,7 @@ export default function CustomizationSection() {
               whileHover={{ scale: 1.03, boxShadow: "0 12px 32px rgba(255, 215, 0, 0.5)" }}
               whileTap={{ scale: 0.98 }}
             >
-              Begin Nu Met Uw Ontwerp →
+              Begin nu met uw ontwerp →
             </motion.button>
           </motion.div>
         </div>

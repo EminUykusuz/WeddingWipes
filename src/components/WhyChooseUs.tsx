@@ -172,7 +172,7 @@ export default function WhyChooseUs() {
                 textDecoration: 'none',
                 display: 'inline-block'
               }}>
-                Neem Contact Op
+                Neem contact op
               </a>
             </div>
           </div>

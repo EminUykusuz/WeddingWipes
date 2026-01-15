@@ -14,213 +14,104 @@ type PriceRow = {
   prijzen: Prijzen;
 };
 
+
 export default function Pricelist() {
-  const priceData: PriceRow[] = [
-    {
-      type: "Gevouwen",
-      formaat: "20 x 20 cm.",
-      prijzen: { 300: 1.00, 500: 0.80, 750: 0.60, 1000: 0.50 }
-    },
-    {
-      type: "Gevouwen",
-      formaat: "20 x 25 cm.",
-      prijzen: { 300: 1.05, 500: 0.85, 750: 0.65, 1000: 0.55 }
-    },
-    {
-      type: "Gevouwen",
-      formaat: "23 x 25 cm.",
-      prijzen: { 300: 1.10, 500: 0.90, 750: 0.70, 1000: 0.60 }
-    },
-    {
-      type: "Opgerold",
-      formaat: "25 x 25 cm.",
-      prijzen: { 300: 1.00, 500: 0.80, 750: 0.60, 1000: 0.50 }
-    },
-    {
-      type: "Opgerold",
-      formaat: "30 x 30 cm.",
-      prijzen: { 300: 1.05, 500: 0.85, 750: 0.65, 1000: 0.55 }
-    },
-    {
-      type: "Opgerold",
-      formaat: "30 x 36 cm.",
-      prijzen: { 300: 1.10, 500: 0.90, 750: 0.70, 1000: 0.60 }
-    }
+  // Prijzen per type en aantal stuks
+  // Kaartdata: type, prijs, aantal, formaat, gift
+  const cards = [
+    { type: "Opgerold", price: 315, aantal: 300, size: "30 x 30 cm", gift: false },
+    { type: "Opgerold", price: 425, aantal: 500, size: "30 x 30 cm", gift: true },
+    { type: "Opgerold", price: 487.5, aantal: 750, size: "30 x 30 cm", gift: true },
+    { type: "Opgerold", price: 550, aantal: 1000, size: "30 x 30 cm", gift: true },
+    { type: "Gevouwen", price: 330, aantal: 300, size: "23 x 25 cm", gift: false },
+    { type: "Gevouwen", price: 450, aantal: 500, size: "23 x 25 cm", gift: true },
+    { type: "Gevouwen", price: 525, aantal: 750, size: "23 x 25 cm", gift: true },
+    { type: "Gevouwen", price: 600, aantal: 1000, size: "23 x 25 cm", gift: true },
   ];
 
-  const aantallen = [300, 500, 750, 1000];
-  const [selectedAantal, setSelectedAantal] = React.useState(300);
-
-  const renderGrid = (type: "Gevouwen" | "Opgerold") => (
-    <>
-      <div
-        style={{
-          fontWeight: 800,
-          color: "#a67c52",
-          fontSize: "1.15rem",
-          marginBottom: "1.2rem",
-          letterSpacing: "0.01em"
-        }}
-      >
-        {type}
-      </div>
-
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(3, 1fr)",
-          gap: "1.5rem",
-          justifyItems: "center",
-          marginBottom: "3rem"
-        }}
-      >
-        {priceData
-          .filter(row => row.type === type)
-          .map(row => (
-            <div
-              key={row.type + row.formaat}
-              style={{
-                background: "#fff",
-                borderRadius: "16px",
-                boxShadow: "0 2px 12px rgba(166,124,82,0.10)",
-                border: "1.5px solid #f7e9d7",
-                padding: "2rem 1.2rem 1.5rem 1.2rem",
-                minWidth: "200px",
-                maxWidth: "240px",
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                transition: "box-shadow 0.2s, border 0.2s",
-                cursor: "default"
-              }}
-              onMouseOver={e => {
-                e.currentTarget.style.boxShadow =
-                  "0 4px 24px rgba(166,124,82,0.18)";
-                e.currentTarget.style.border = "2px solid #a67c52";
-              }}
-              onMouseOut={e => {
-                e.currentTarget.style.boxShadow =
-                  "0 2px 12px rgba(166,124,82,0.10)";
-                e.currentTarget.style.border = "1.5px solid #f7e9d7";
-              }}
-            >
-              <span
-                style={{
-                  fontWeight: 500,
-                  color: "#a67c52",
-                  fontSize: "1.02rem",
-                  marginBottom: "1.2rem"
-                }}
-              >
-                {row.formaat}
-              </span>
-
-              <span
-                style={{
-                  fontWeight: 900,
-                  color: "#a67c52",
-                  fontSize: "2.1rem",
-                  marginBottom: "0.2rem",
-                  letterSpacing: "0.01em"
-                }}
-              >
-                €
-                {(row.prijzen[selectedAantal as keyof Prijzen] * selectedAantal)
-                  .toFixed(2)
-                  .replace(".", ",")}
-              </span>
-
-              <span
-                style={{
-                  fontWeight: 400,
-                  color: "#a67c52",
-                  fontSize: "0.98rem",
-                  opacity: 0.7
-                }}
-              >
-                voor {selectedAantal} stuks
-              </span>
-            </div>
-          ))}
-      </div>
-    </>
+  // SVG icons
+  const sizeIcon = (
+    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg" style={{marginRight:8}}>
+      <rect x="3" y="3" width="16" height="16" rx="3" stroke="#2e2a5b" strokeWidth="2" />
+      <path d="M3 11H19" stroke="#2e2a5b" strokeWidth="2" />
+      <path d="M11 3V19" stroke="#2e2a5b" strokeWidth="2" />
+    </svg>
+  );
+  const giftIcon = (
+    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg" style={{marginRight:8}}>
+      <rect x="4" y="8" width="14" height="10" rx="2" stroke="#2e2a5b" strokeWidth="2" />
+      <path d="M4 8L11 3L18 8" stroke="#2e2a5b" strokeWidth="2" />
+    </svg>
   );
 
   return (
     <section style={{ padding: "4rem 1.5rem", background: "#fff" }}>
-      <div
-        style={{
-          maxWidth: "700px",
-          margin: "0 auto",
-          background: "#fff",
-          borderRadius: "20px",
-          boxShadow: "0 8px 32px rgba(166,124,82,0.10)",
-          padding: "2.5rem 2rem",
-          border: "1.5px solid #f7e9d7"
-        }}
-      >
-        <h2
-          style={{
-            fontSize: "clamp(1.7rem, 4vw, 2.5rem)",
-            fontWeight: 900,
-            marginBottom: "2.5rem",
-            color: "#a67c52",
-            textAlign: "center"
-          }}
-        >
-          Prijslijst
-        </h2>
-
-        <div
-          style={{
+      <h2 style={{
+        fontSize: "clamp(2rem, 6vw, 3.5rem)",
+        fontWeight: 900,
+        textAlign: "center",
+        marginBottom: "2.5rem",
+        color: "#111"
+      }}>Prijslijst</h2>
+      {/* Geen knoppen meer, alles direct zichtbaar per kaart */}
+      <div style={{width:'100%',display:'flex',justifyContent:'center'}}>
+        <div className="pricelist-grid" style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(4, 1fr)',
+          gap: '2rem',
+          justifyItems: 'center',
+          maxWidth: '1200px',
+          width: '100%'
+        }}>
+        {cards.map((card, i) => (
+          <div key={i} className={`pricelist-card ${card.type === 'Opgerold' ? 'opgerold' : 'gevouwen'}`} style={{
+            background: "#fff",
+            borderRadius: "16px",
+            boxShadow: "0 2px 12px rgba(0,0,0,0.10)",
+            borderLeft: `6px solid ${card.type === 'Opgerold' ? '#ffe564' : '#2e2a5b'}`,
+            padding: "2rem 1.5rem 1.5rem 1.5rem",
+            minWidth: "220px",
+            maxWidth: "260px",
             display: "flex",
-            justifyContent: "center",
-            gap: "1rem",
-            marginBottom: "2.5rem"
-          }}
-        >
-          {aantallen.map(aantal => (
-            <button
-              key={aantal}
-              onClick={() => setSelectedAantal(aantal)}
-              style={{
-                padding: "0.6rem 1.3rem",
-                borderRadius: "999px",
-                border:
-                  selectedAantal === aantal
-                    ? "2px solid #a67c52"
-                    : "1.5px solid #f7e9d7",
-                background:
-                  selectedAantal === aantal ? "#f7e9d7" : "#fff",
-                color: "#a67c52",
-                fontWeight: 700,
-                fontSize: "1.05rem",
-                cursor: "pointer"
-              }}
-            >
-              {aantal}
-            </button>
-          ))}
+            flexDirection: "column",
+            alignItems: "flex-start",
+            textAlign: "left",
+            transition: "box-shadow 0.2s, border 0.2s",
+            cursor: "default"
+          }}>
+            <span style={{
+              fontWeight: 900,
+              fontSize: "2rem",
+              color: "#111",
+              marginBottom: "0.5rem"
+            }}>{card.type}</span>
+            <span style={{
+              fontWeight: 700,
+              fontSize: "1.5rem",
+              color: "#111",
+              marginBottom: "0.2rem",
+              display: 'flex',
+              alignItems: 'center',
+              gap: '0.5rem',
+              fontFamily: 'inherit'
+            }}>
+              {`€${card.price.toFixed(2).replace('.', ',')}`}
+              <span style={{ fontSize: '1rem', color: '#888', fontWeight: 400, fontFamily: 'inherit' }}>
+                {`/ ${card.aantal} stuks`}
+              </span>
+            </span>
+            <hr style={{width:'100%',border:'none',borderTop:'2px solid #2e2a5b1a',margin:'0.7rem 0 1rem 0'}} />
+            <div style={{display:'flex',alignItems:'center',fontSize:'1rem',color:'#222',marginBottom:'0.5rem'}}>
+              {sizeIcon} {card.size}
+            </div>
+            {card.gift && (
+              <div style={{display:'flex',alignItems:'center',fontSize:'1rem',color:'#222'}}>
+                {giftIcon} Gratis welkomstkaartje
+              </div>
+            )}
+          </div>
+        ))}
         </div>
-
-        {renderGrid("Gevouwen")}
-        {renderGrid("Opgerold")}
-
-        <p
-          style={{
-            marginTop: "2rem",
-            color: "#a67c52",
-            textAlign: "center",
-            fontWeight: 500,
-            fontSize: "1.05rem",
-            background: "#fcf7f0",
-            borderRadius: "8px",
-            padding: "1rem 1.5rem",
-            boxShadow: "0 1px 6px rgba(166,124,82,0.04)"
-          }}
-        >
-          Alle prijzen zijn inclusief ontwerp, BTW en verzending binnen Nederland.
-        </p>
       </div>
     </section>
   );

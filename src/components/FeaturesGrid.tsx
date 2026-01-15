@@ -55,7 +55,7 @@ export default function FeaturesGrid() {
               Extra
             </h3>
             <p style={{ fontSize: 'clamp(0.8rem, 1.5vw, 0.9rem)', color: '#6B7280' }}>
-              Welkomstkaartje als attent cadeau
+              Welkomstkaartje als attent cadeau vanaf 500 stuks
             </p>
           </div>
           <div style={{

@@ -14,7 +14,7 @@ export default function SolutionsSection() {
             marginBottom: '1rem',
             color: 'var(--color-gray-dark)'
           }}>
-            Hoe Werkt Wedding Wipes?
+            Hoe werkt Weddingwipes?
           </h2>
           <p style={{
             fontSize: 'clamp(0.95rem, 2vw, 1.1rem)',
@@ -42,7 +42,7 @@ export default function SolutionsSection() {
               marginBottom: '2rem',
               color: 'var(--color-gray-dark)'
             }}>
-              Wat Wij Aanbieden
+              Wat wij aanbieden
             </h3>
 
             <div style={{ display: 'grid', gap: '1.5rem' }}>
@@ -77,7 +77,7 @@ export default function SolutionsSection() {
                   }}>
                     <FaWandMagicSparkles style={{ fontSize: '1.3rem', color: '#fff' }} />
                   </div>
-                  Volledige Personalisatie
+                  Volledige personalisatie
                 </h4>
                 <p style={{
                   color: '#6B7280',
@@ -128,7 +128,7 @@ export default function SolutionsSection() {
                   lineHeight: 1.6,
                   margin: 0
                 }}>
-                  Stijlvolle welkomstkaartjes bij elke bestelling
+                  Stijlvolle welkomstkaartjes bij elke bestelling vanaf 500 stuks, als attent gebaar voor je gasten
                 </p>
               </div>
 
@@ -163,7 +163,7 @@ export default function SolutionsSection() {
                   }}>
                     <FaGem style={{ fontSize: '1.3rem', color: '#fff' }} />
                   </div>
-                  Een Verfijnd Detail
+                  Een verfijnd detail
                 </h4>
                 <p style={{
                   color: '#6B7280',
@@ -189,7 +189,7 @@ export default function SolutionsSection() {
               color: '#fff',
               transition: 'all 0.3s'
             }}>
-              Meer Informatie Aanvragen
+              Meer informatie aanvragen
             </a>
           </div>
 

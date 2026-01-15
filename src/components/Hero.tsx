@@ -64,7 +64,7 @@ export default function Hero() {
             }}
             whileHover={{ scale: 1.05 }}
           >
-            WYPES ✓
+            Weddingwipes ✓
           </motion.div>
           <motion.h1
             style={{
@@ -108,7 +108,7 @@ export default function Hero() {
             whileHover={{ scale: 1.05, boxShadow: '0 8px 20px rgba(46, 42, 91, 0.4), 0 4px 12px rgba(163, 196, 76, 0.3)' }}
             whileTap={{ scale: 0.95 }}
           >
-            Neem Contact Op
+            Neem contact op
           </motion.a>
         </motion.div>
       </div>

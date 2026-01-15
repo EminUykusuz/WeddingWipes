@@ -10,7 +10,7 @@ export default function TopBar() {
       textAlign: 'center',
       fontWeight: 600
     }}>
-      ✨ Bestel nu uw gepersonaliseerde vochtige doekjes - Gratis verzending bij bestellingen boven € 500
+      ✨ Bestel nu uw gepersonaliseerde vochtige doekjes - Gratis welkomskaartje bij vanaf 500 stuks! ✨
     </div>
   );
 }
