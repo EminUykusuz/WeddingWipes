@@ -16,15 +16,12 @@ export default function Hero() {
   };
 
   return (
-    <section style={{
+    <section className="hero-section" style={{
       backgroundImage: 'url(/hero.png)',
       backgroundSize: 'cover',
       backgroundPosition: 'center',
       backgroundRepeat: 'no-repeat',
-      color: '#fff',
-      padding: '4rem 1rem 8rem',
-      position: 'relative',
-      overflow: 'hidden'
+      color: '#fff'
     }}>
       {/* Dark Overlay */}
       <div style={{

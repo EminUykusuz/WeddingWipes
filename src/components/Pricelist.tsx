@@ -55,11 +55,11 @@ export default function Pricelist() {
       }}>Prijslijst</h2>
       {/* Geen knoppen meer, alles direct zichtbaar per kaart */}
       <div style={{width:'100%',display:'flex',justifyContent:'center'}}>
-        <div className="pricelist-grid" style={{
+        <div className="pricelist-grid center" style={{
           display: 'grid',
           gridTemplateColumns: 'repeat(4, 1fr)',
           gap: '2rem',
-          alignItems: 'stretch',
+          justifyItems: 'center',
           maxWidth: '1200px',
           width: '100%',
           gridAutoRows: '1fr'
@@ -71,8 +71,6 @@ export default function Pricelist() {
             boxShadow: "0 2px 12px rgba(0,0,0,0.10)",
             borderLeft: `6px solid ${card.type === 'Opgerold' ? '#ffe564' : '#2e2a5b'}`,
             padding: "2rem 1.5rem 1.5rem 1.5rem",
-            minWidth: "220px",
-            maxWidth: "260px",
             display: "flex",
             flexDirection: "column",
             alignItems: "flex-start",

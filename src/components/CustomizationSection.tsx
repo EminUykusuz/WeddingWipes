@@ -61,8 +61,8 @@ export default function CustomizationSection() {
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
-            gap: "3rem",
+            gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
+            gap: "2rem",
             alignItems: "center",
           }}
         >
@@ -84,12 +84,13 @@ export default function CustomizationSection() {
               }}
             >
               <img
-                src="/arzu&malik.png"
+                src="/Arzu%26Malik.png"
                 alt="Voorbeeld Weddingwipes"
+                className="custom-image"
                 style={{
                   width: "100%",
-                  height: "500px",
-                  objectFit: "cover",
+                  height: "auto",
+                  objectFit: "contain",
                   borderRadius: "16px",
                   boxShadow: "0 10px 40px rgba(205,172,0,0.13)",
                   border: "2px solid #fff",
