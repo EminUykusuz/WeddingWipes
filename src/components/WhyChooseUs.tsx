@@ -50,54 +50,39 @@ export default function WhyChooseUs() {
             alignItems: 'center',
             marginTop: '3rem'
           }}>
-            <div style={{
-              background: 'linear-gradient(135deg, var(--color-gray-light) 0%, #e5e7eb 100%)',
-              height: '400px',
-              borderRadius: '16px',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              fontSize: '4rem',
-              overflow: 'hidden',
-              position: 'relative',
-              boxShadow: '0 4px 24px 0 rgba(0,0,0,0.07)'
-            }}>
-              <img
-                src={images[prev]}
-                alt="Önceki ıslak mendil görseli"
-                style={{
-                  position: 'absolute',
-                  top: 0,
-                  left: 0,
-                  width: '100%',
-                  height: '100%',
-                  objectFit: 'cover',
-                  borderRadius: '16px',
-                  transition: 'opacity 1.5s',
-                  opacity: fade ? 0 : 1,
-                  zIndex: 1,
-                  boxShadow: '0 2px 12px 0 rgba(0,0,0,0.08)'
-                }}
-                draggable={false}
-              />
-              <img
-                src={images[current]}
-                alt="Islak mendil görseli"
-                style={{
-                  position: 'absolute',
-                  top: 0,
-                  left: 0,
-                  width: '100%',
-                  height: '100%',
-                  objectFit: 'cover',
-                  borderRadius: '16px',
-                  transition: 'opacity 1.5s',
-                  opacity: fade ? 1 : 0,
-                  zIndex: 2,
-                  boxShadow: '0 2px 12px 0 rgba(0,0,0,0.08)'
-                }}
-                draggable={false}
-              />
+            <div className="why-image-wrapper" style={{
+                background: 'linear-gradient(135deg, var(--color-gray-light) 0%, #e5e7eb 100%)',
+                borderRadius: '16px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                fontSize: '4rem',
+                overflow: 'hidden',
+                position: 'relative',
+                boxShadow: '0 4px 24px 0 rgba(0,0,0,0.07)'
+              }}>
+                <img
+                  src={images[prev]}
+                  alt="Önceki ıslak mendil görseli"
+                  className="why-image"
+                  style={{
+                    transition: 'opacity 1.5s',
+                    opacity: fade ? 0 : 1,
+                    zIndex: 1,
+                  }}
+                  draggable={false}
+                />
+                <img
+                  src={images[current]}
+                  alt="Islak mendil görseli"
+                  className="why-image"
+                  style={{
+                    transition: 'opacity 1.5s',
+                    opacity: fade ? 1 : 0,
+                    zIndex: 2,
+                  }}
+                  draggable={false}
+                />
             </div>
             <div>
               <ul style={{ display: 'grid', gap: '1.5rem' }}>

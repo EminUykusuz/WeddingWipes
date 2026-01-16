@@ -11,8 +11,7 @@ export default function ProductShowcase() {
         gap: '3rem',
         alignItems: 'center'
       }}>
-        <div style={{
-          height: '450px',
+        <div className="product-image" style={{
           borderRadius: '16px',
           overflow: 'hidden',
           boxShadow: '0 4px 20px rgba(0,0,0,0.1)'

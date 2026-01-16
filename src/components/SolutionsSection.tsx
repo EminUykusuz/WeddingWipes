@@ -30,12 +30,12 @@ export default function SolutionsSection() {
         {/* Two Column Layout */}
         <div style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))',
-          gap: '4rem',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+          gap: '2rem',
           alignItems: 'center'
         }}>
           {/* Linker Kolom - Tekst */}
-          <div>
+          <div className="solutions-text">
             <h3 style={{
               fontSize: 'clamp(1.3rem, 3vw, 1.6rem)',
               fontWeight: 800,
@@ -45,7 +45,7 @@ export default function SolutionsSection() {
               Wat wij aanbieden
             </h3>
 
-            <div style={{ display: 'grid', gap: '1.5rem' }}>
+            <div className="solutions-cards" style={{ display: 'grid', gap: '1.5rem' }}>
               {/* Item 1 */}
               <div style={{
                 background: '#fff',
@@ -176,7 +176,7 @@ export default function SolutionsSection() {
               </div>
             </div>
 
-            <a href="https://wa.me/31627141526?text=Hallo%20Wedding%20Wipes%20ik%20wil%20graag%20meer%20informatie" target="_blank" rel="noopener noreferrer" className="btn-gold" style={{
+            <a href="https://wa.me/31627141526?text=Hallo%20Wedding%20Wipes%20ik%20wil%20graag%20meer%20informatie" target="_blank" rel="noopener noreferrer" className="btn-gold solutions-cta" style={{
               marginTop: '2rem',
               padding: '0.875rem 2rem',
               fontWeight: 600,
@@ -194,9 +194,8 @@ export default function SolutionsSection() {
           </div>
 
           {/* Rechter Kolom - Visueel */}
-          <div style={{
+          <div className="solutions-image-wrapper" style={{
             background: '#fff',
-            height: '450px',
             borderRadius: '16px',
             display: 'flex',
             alignItems: 'center',
@@ -206,12 +205,13 @@ export default function SolutionsSection() {
             overflow: 'hidden',
           }}>
             <img
-              src="/dilruba&usame.png"
+              src="/Dilruba%26Usame.png"
               alt="Klaar voor je bruiloft"
+              className="solutions-image"
               style={{
                 width: '100%',
-                height: '100%',
-                objectFit: 'cover',
+                height: 'auto',
+                objectFit: 'contain',
                 borderRadius: '0',
                 boxShadow: 'none',
                 border: 'none',

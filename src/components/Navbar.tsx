@@ -52,8 +52,8 @@ export default function Navbar() {
           <img
             src="/logo.jpg"
             alt="Wedding Wypes Logo"
+            className="site-logo"
             style={{
-              height: '60px',
               width: 'auto',
               objectFit: 'contain',
               borderRadius: '8px'
@@ -117,7 +117,6 @@ export default function Navbar() {
           className="mobile-visible"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           style={{
-            display: 'none',
             background: 'none',
             border: 'none',
             fontSize: '1.5rem',
@@ -135,7 +134,6 @@ export default function Navbar() {
         <div
           className="mobile-visible"
           style={{
-            display: 'none',
             flexDirection: 'column',
             gap: '1rem',
             marginTop: '1rem',

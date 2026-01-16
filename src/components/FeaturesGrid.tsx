@@ -6,10 +6,10 @@ export default function FeaturesGrid() {
   return (
     <section style={{ padding: 'clamp(2rem, 5vw, 5rem) clamp(1rem, 3vw, 1.5rem)', background: '#f9f9f9' }}>
       <div className="container" style={{ maxWidth: '1400px', margin: '0 auto', width: '100%' }}>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 'clamp(1rem, 3vw, 2rem)' }}>
+        <div className="features-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: 'clamp(0.5rem, 2vw, 1rem)' }}>
           <div style={{
             textAlign: 'center',
-            padding: 'clamp(1.5rem, 3vw, 2rem)',
+            padding: 'clamp(1rem, 2vw, 1.25rem)',
             background: '#fff',
             borderRadius: '12px',
             boxShadow: '0 2px 8px rgba(0,0,0,0.05)'
@@ -26,7 +26,7 @@ export default function FeaturesGrid() {
           </div>
           <div style={{
             textAlign: 'center',
-            padding: 'clamp(1.5rem, 3vw, 2rem)',
+            padding: 'clamp(1rem, 2vw, 1.25rem)',
             background: '#fff',
             borderRadius: '12px',
             boxShadow: '0 2px 8px rgba(0,0,0,0.05)'
@@ -43,7 +43,7 @@ export default function FeaturesGrid() {
           </div>
           <div style={{
             textAlign: 'center',
-            padding: 'clamp(1.5rem, 3vw, 2rem)',
+            padding: 'clamp(1rem, 2vw, 1.25rem)',
             background: '#fff',
             borderRadius: '12px',
             boxShadow: '0 2px 8px rgba(0,0,0,0.05)'
@@ -60,7 +60,7 @@ export default function FeaturesGrid() {
           </div>
           <div style={{
             textAlign: 'center',
-            padding: 'clamp(1.5rem, 3vw, 2rem)',
+            padding: 'clamp(1rem, 2vw, 1.25rem)',
             background: '#fff',
             borderRadius: '12px',
             boxShadow: '0 2px 8px rgba(0,0,0,0.05)'
