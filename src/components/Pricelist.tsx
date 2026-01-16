@@ -57,9 +57,9 @@ export default function Pricelist() {
       <div style={{width:'100%',display:'flex',justifyContent:'center'}}>
         <div className="pricelist-grid center" style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(4, 1fr)',
-          gap: '2rem',
-          justifyItems: 'center',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
+          gap: '1.5rem',
+          justifyItems: 'stretch',
           maxWidth: '1200px',
           width: '100%',
           gridAutoRows: '1fr'
