@@ -135,7 +135,7 @@ export default function Configurator() {
               className="ww-mockup-container"
             >
               <img
-                src="/emptywipe.png"
+                src="/Emptywipe.png"
                 alt="Lege Weddingwipe op bord"
                 style={{ width: '100%', display: 'block', objectFit: 'cover', maxHeight: 420, transform: 'scale(1.5)' }}
               />
