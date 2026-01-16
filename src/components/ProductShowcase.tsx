@@ -3,12 +3,12 @@
 export default function ProductShowcase() {
   return (
     <section id="products" style={{ padding: '5rem 1.5rem', background: '#fff' }}>
-      <div className="container" style={{
+        <div className="container" style={{
         maxWidth: '1200px',
         margin: '0 auto',
         display: 'grid',
-        gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-        gap: '3rem',
+        gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
+        gap: '2rem',
         alignItems: 'center'
       }}>
         <div className="product-image" style={{

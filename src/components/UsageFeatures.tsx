@@ -54,7 +54,7 @@ export default function UsageFeatures() {
                 {/* SOL: FOTOĞRAF */}
                 <motion.div 
                   initial={{ opacity: 0, x: -50 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -50 }} transition={{ duration: 0.5 }}
-                  style={{ flex: 1, minWidth: '300px', display: 'flex', justifyContent: 'center' }}
+                  style={{ flex: 1, minWidth: '240px', display: 'flex', justifyContent: 'center' }}
                 >
                   <div style={{ position: 'relative' }}>
                     <div style={{ position: 'absolute', inset: 0, background: 'rgba(255,255,255,0.2)', borderRadius: '50%', filter: 'blur(40px)', transform: 'scale(0.9)' }}></div>
@@ -69,7 +69,7 @@ export default function UsageFeatures() {
                 {/* SAĞ: ÖZELLİK LİSTESİ (GRID) */}
                 <motion.div 
                   initial={{ opacity: 0, x: 50 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: 50 }} transition={{ duration: 0.5, delay: 0.2 }}
-                  style={{ flex: 1, minWidth: '300px', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '1.5rem' }}
+                  style={{ flex: 1, minWidth: '240px', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '1rem' }}
                 >
                   <SpecCard title="60gr/m²" sub="Premium Textuur" icon={<Layers size={24} />} delay={0.1} />
                   <SpecCard title="3 Jaar Houdbaarheid" sub="Blijft Vers" icon={<RotateCcw size={24} />} delay={0.2} />
@@ -139,7 +139,7 @@ function ContentLayout({ imageSrc, title, desc }: ContentLayoutProps) {
       {/* SOL: FOTO */}
       <motion.div 
         initial={{ x: -50, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ duration: 0.5 }}
-        style={{ flex: 1, minWidth: '300px', display: 'flex', justifyContent: 'center' }}
+        style={{ flex: 1, minWidth: '240px', display: 'flex', justifyContent: 'center' }}
       >
          <img 
             src={imageSrc} 
@@ -151,7 +151,7 @@ function ContentLayout({ imageSrc, title, desc }: ContentLayoutProps) {
       {/* SAĞ: YAZI */}
       <motion.div 
         initial={{ x: 50, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ duration: 0.5, delay: 0.2 }}
-        style={{ flex: 1, minWidth: '300px', textAlign: 'left' }}
+        style={{ flex: 1, minWidth: '240px', textAlign: 'left' }}
       >
         <h3 style={{ fontSize: '3.5rem', fontWeight: 800, marginBottom: '1.5rem', lineHeight: 1.1, textShadow: '0 5px 15px rgba(0,0,0,0.2)' }}>
           {title}

@@ -143,6 +143,16 @@ img, video, svg {
    Components may override with inline styles; prefer class-based usage for responsiveness. */
 .pricelist-grid { display: grid; grid-template-columns: 1fr; gap: 1rem; }
 .pricelist-card { width: 100%; box-sizing: border-box; }
+.pricelist-card {
+  width: 100%;
+  max-width: 720px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1rem 1rem;
+}
 
 /* Larger screens */
 @media (min-width: 769px) {
@@ -156,6 +166,29 @@ img, video, svg {
   .mobile-visible { display: none !important; }
   .pricelist-grid { grid-template-columns: repeat(4, 1fr); gap: 2rem; }
   .site-logo { height: 60px; }
+}
+
+/* Pricelist: tablet/desktop overrides */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .pricelist-grid { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+  .pricelist-card { max-width: 520px; align-items: flex-start; text-align: left; padding: 1.25rem 1.5rem; }
+}
+
+@media (min-width: 1025px) {
+  .pricelist-card { max-width: none; align-items: flex-start; text-align: left; padding: 2rem 1.5rem 1.5rem 1.5rem; }
+}
+
+/* Tablet-specific adjustments (iPad portrait/landscape) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  body { font-size: 15.5px; }
+  .container { max-width: 960px; padding: 0 1.25rem; }
+  h1 { font-size: 2.25rem; }
+  h2 { font-size: 1.6rem; }
+  .hero-section { min-height: 360px; }
+  .product-image { height: 380px; }
+  .solutions-image-wrapper { height: 360px; }
+  .why-image-wrapper { height: 360px; }
+  .pricelist-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 /* Product image sizing */
