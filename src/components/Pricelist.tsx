@@ -59,9 +59,10 @@ export default function Pricelist() {
           display: 'grid',
           gridTemplateColumns: 'repeat(4, 1fr)',
           gap: '2rem',
-          justifyItems: 'center',
+          alignItems: 'stretch',
           maxWidth: '1200px',
-          width: '100%'
+          width: '100%',
+          gridAutoRows: '1fr'
         }}>
         {cards.map((card, i) => (
           <div key={i} className={`pricelist-card ${card.type === 'Opgerold' ? 'opgerold' : 'gevouwen'}`} style={{
@@ -77,7 +78,8 @@ export default function Pricelist() {
             alignItems: "flex-start",
             textAlign: "left",
             transition: "box-shadow 0.2s, border 0.2s",
-            cursor: "default"
+            cursor: "default",
+            height: '100%'
           }}>
             <span style={{
               fontWeight: 900,
