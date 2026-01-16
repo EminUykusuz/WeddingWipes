@@ -287,24 +287,31 @@ export default function CustomizationSection() {
                 </div>
               </motion.div>
             </div>
-            <motion.button
-              className="btn-gold"
-              style={{
-                width: "100%",
-                marginTop: "2.5rem",
-                padding: "1.25rem 2.5rem",
-                fontWeight: 700,
-                border: "none",
-                borderRadius: "14px",
-                cursor: "pointer",
-                fontSize: "1.1rem",
-                boxShadow: "0 8px 24px rgba(255, 215, 0, 0.3)",
-              }}
+            <motion.div
               whileHover={{ scale: 1.03, boxShadow: "0 12px 32px rgba(255, 215, 0, 0.5)" }}
               whileTap={{ scale: 0.98 }}
+              style={{ width: "100%", marginTop: "2.5rem" }}
             >
-              Begin nu met uw ontwerp →
-            </motion.button>
+              <a
+                href="/configurator"
+                style={{
+                  display: "block",
+                  padding: "1.25rem 2.5rem",
+                  fontWeight: 700,
+                  border: "none",
+                  borderRadius: "14px",
+                  cursor: "pointer",
+                  fontSize: "1.1rem",
+                  boxShadow: "0 8px 24px rgba(255, 215, 0, 0.3)",
+                  background: "linear-gradient(90deg, #ffe564 0%, #cdac00 100%)",
+                  color: "#2e2a5b",
+                  textDecoration: "none",
+                  textAlign: "center"
+                }}
+              >
+                Begin nu met uw ontwerp →
+              </a>
+            </motion.div>
           </motion.div>
         </div>
       </div>

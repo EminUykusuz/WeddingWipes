@@ -1,3 +1,13 @@
+
+/* Import only the fonts we use in the configurator */
+@import url('https://fonts.googleapis.com/css2?family=Bidena+trial&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Soralize&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merona+Island&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rankut&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sephir&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Italianno&display=swap');
+
 :root {
   --color-gold: #cdac00;
   --color-white: #fff;
@@ -6,7 +16,6 @@
   --color-gray-dark: #4b5563;
   --color-purple: #2e2a5b;
   --color-green: #a3c44c;
-  --font-main: 'Inter', Arial, sans-serif;
 }
 
 @import "tailwindcss/preflight";
@@ -19,7 +28,7 @@
 }
 
 body {
-  font-family: var(--font-main);
+  font-family: Arial, Helvetica, sans-serif;
   background: var(--color-white);
   color: var(--color-gray-dark);
   line-height: 1.6;
