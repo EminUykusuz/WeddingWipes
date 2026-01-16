@@ -127,24 +127,26 @@ export default function Configurator() {
                 background: '#fff',
                 marginBottom: 24,
                 position: 'relative',
-                aspectRatio: '4/3',
                 minHeight: 220,
                 boxSizing: 'border-box',
                 transition: 'max-width 0.3s, min-height 0.3s',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
               }}
               className="ww-mockup-container"
             >
               <img
                 src="/Emptywipe.png"
                 alt="Lege Weddingwipe op bord"
-                style={{ width: '100%', display: 'block', objectFit: 'cover', maxHeight: 420, transform: 'scale(1.5)' }}
+                style={{ width: '100%', height: '100%', display: 'block', objectFit: 'contain', transform: 'scale(1.5)' }}
               />
               {/* Overlayed text */}
               <div
                 style={{
                   position: 'absolute',
                   left: 0,
-                  top: '53%',
+                  top: '50%',
                   width: '100%',
                   display: 'flex',
                   flexDirection: 'column',
@@ -254,10 +256,10 @@ export default function Configurator() {
                 <label style={{ fontWeight: 700, color: '#222', fontSize: '1.1rem', marginBottom: 10, display: 'block' }}>Lettertype</label>
                 <div
                   style={{
-                    display: 'flex',
-                    gap: 12,
+                    display: 'grid',
+                    gridTemplateColumns: 'repeat(auto-fit, minmax(130px, 1fr))',
+                    gap: 10,
                     marginBottom: 18,
-                    flexWrap: 'wrap',
                   }}
                   className="ww-font-slider"
                 >
@@ -267,19 +269,21 @@ export default function Configurator() {
                       type="button"
                       onClick={() => setFont(opt.value)}
                       style={{
-                        padding: '0.7rem 1.5rem',
+                        padding: '0.65rem 1rem',
                         border: font === opt.value ? '2px solid #ffe564' : '2px solid #eee',
                         background: font === opt.value ? '#fffbe6' : '#fff',
                         borderRadius: 8,
                         fontWeight: 700,
                         fontFamily: opt.value,
-                        fontSize: '1.1rem',
+                        fontSize: '1rem',
                         color: '#b89b00',
                         cursor: 'pointer',
                         boxShadow: font === opt.value ? '0 2px 8px #ffe56455' : 'none',
                         transition: 'all 0.2s',
-                        minWidth: 120,
-                        flex: '0 0 auto',
+                        textAlign: 'center',
+                        whiteSpace: 'nowrap',
+                        overflow: 'hidden',
+                        textOverflow: 'ellipsis',
                       }}
                     >
                       {opt.label}
