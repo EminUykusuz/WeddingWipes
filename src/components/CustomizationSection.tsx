@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { FaHeart, FaTable, FaGift } from "react-icons/fa6";
 
 export default function CustomizationSection() {
   return (
@@ -20,17 +21,19 @@ export default function CustomizationSection() {
           <motion.div
             style={{
               display: "inline-block",
-              background: "rgba(139, 92, 246, 0.1)",
+              background: "linear-gradient(90deg, #cdac00 0%, #f0c800 100%)",
               padding: "0.5rem 1.5rem",
               borderRadius: "50px",
               marginBottom: "1.5rem",
               fontSize: "0.9rem",
               fontWeight: 600,
-              color: "var(--color-purple)",
+              color: "#fff",
+              letterSpacing: "0.5px",
+              boxShadow: "0 2px 12px #cdac0033",
             }}
             whileHover={{ scale: 1.05 }}
           >
-            ✨ Volledig Aanpasbaar
+            ✨ Persoonlijk voor jullie bruiloft
           </motion.div>
           <h2
             style={{
@@ -41,25 +44,25 @@ export default function CustomizationSection() {
               lineHeight: 1.2,
             }}
           >
-            Breng Uw Droomontwerp Tot Leven
+            Jullie Weddingwipes, helemaal op maat
           </h2>
           <p
             style={{
-              fontSize: "1.2rem",
+              fontSize: "1.15rem",
               color: "#6B7280",
               maxWidth: "800px",
               margin: "0 auto",
               lineHeight: 1.8,
             }}
           >
-            Pas elk detail aan zoals u wilt. Logo, boodschap, kleur en ontwerp zijn volledig onder uw controle.
+              Kies jullie namen en een persoonlijke boodschap. Het ontwerp is altijd elegant en feestelijk, perfect passend bij de sfeer van jullie dag. Met jullie namen en een persoonlijke boodschap, stijlvol gepresenteerd op elke tafel. Een verfijnd detail dat de tafelaankleding compleet maakt.
           </p>
         </motion.div>
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
-            gap: "3rem",
+            gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
+            gap: "2rem",
             alignItems: "center",
           }}
         >
@@ -77,17 +80,22 @@ export default function CustomizationSection() {
                 borderRadius: "24px",
                 padding: "2rem",
                 boxShadow: "0 20px 60px rgba(0,0,0,0.15)",
+                overflow: "hidden",
               }}
             >
               <img
-                src="/ornek.png"
-                alt="Örnek Kişiselleştirilmiş Islak Mendil"
+                src="/Arzu%26Malik.png"
+                alt="Voorbeeld Weddingwipes"
+                className="custom-image"
                 style={{
                   width: "100%",
-                  height: "500px",
-                  objectFit: "cover",
+                  height: "auto",
+                  objectFit: "contain",
                   borderRadius: "16px",
-                  boxShadow: "0 10px 40px rgba(0,0,0,0.2)",
+                  boxShadow: "0 10px 40px rgba(205,172,0,0.13)",
+                  border: "2px solid #fff",
+                  background: "#fff",
+                  display: "block",
                 }}
               />
               <motion.div
@@ -128,7 +136,7 @@ export default function CustomizationSection() {
                   background: "#fff",
                   padding: "2rem",
                   borderRadius: "16px",
-                  boxShadow: "0 4px 20px rgba(0,0,0,0.08)",
+                  boxShadow: "0 4px 20px rgba(205,172,0,0.08)",
                   display: "flex",
                   alignItems: "flex-start",
                   gap: "1.5rem",
@@ -140,27 +148,27 @@ export default function CustomizationSection() {
                   style={{
                     width: "60px",
                     height: "60px",
-                    background: "linear-gradient(135deg, #cdac00 0%, #FFA500 100%)",
-                    borderRadius: "16px",
+                    borderRadius: "50%",
+                    background: "linear-gradient(135deg, #cdac00 0%, #f0c800 100%)",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
-                    fontSize: "1.8rem",
                     flexShrink: 0,
+                    boxShadow: "0 4px 12px rgba(205, 172, 0, 0.2)",
                   }}
                 >
-                  🎨
+                  <FaHeart style={{ fontSize: "1.8rem", color: "#fff" }} />
                 </div>
                 <div>
                   <h3
                     style={{
                       fontSize: "1.3rem",
                       fontWeight: 700,
-                      color: "var(--color-gray-dark)",
+                      color: "#cdac00",
                       marginBottom: "0.5rem",
                     }}
                   >
-                    Uw Eigen Logo
+                    Persoonlijk ontwerp
                   </h3>
                   <p
                     style={{
@@ -170,7 +178,7 @@ export default function CustomizationSection() {
                       margin: 0,
                     }}
                   >
-                    Breng uw merk onder de aandacht, print uw logo en ontwerp precies zoals u wilt
+                    Jullie namen en boodschap op elk doekje, helemaal naar wens.
                   </p>
                 </div>
               </motion.div>
@@ -180,7 +188,7 @@ export default function CustomizationSection() {
                   background: "#fff",
                   padding: "2rem",
                   borderRadius: "16px",
-                  boxShadow: "0 4px 20px rgba(0,0,0,0.08)",
+                  boxShadow: "0 4px 20px rgba(205,172,0,0.08)",
                   display: "flex",
                   alignItems: "flex-start",
                   gap: "1.5rem",
@@ -192,27 +200,27 @@ export default function CustomizationSection() {
                   style={{
                     width: "60px",
                     height: "60px",
-                    background: "linear-gradient(135deg, #8B5CF6 0%, #6366F1 100%)",
-                    borderRadius: "16px",
+                    borderRadius: "50%",
+                    background: "linear-gradient(135deg, #cdac00 0%, #f0c800 100%)",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
-                    fontSize: "1.8rem",
                     flexShrink: 0,
+                    boxShadow: "0 4px 12px rgba(205, 172, 0, 0.2)",
                   }}
                 >
-                  ✍️
+                  <FaTable style={{ fontSize: "1.8rem", color: "#fff" }} />
                 </div>
                 <div>
                   <h3
                     style={{
                       fontSize: "1.3rem",
                       fontWeight: 700,
-                      color: "var(--color-gray-dark)",
+                      color: "#cdac00",
                       marginBottom: "0.5rem",
                     }}
                   >
-                    Uw Persoonlijke Boodschap
+                    Stijlvol op elke tafel
                   </h3>
                   <p
                     style={{
@@ -222,7 +230,7 @@ export default function CustomizationSection() {
                       margin: 0,
                     }}
                   >
-                    Naam, datum, persoonlijke boodschap - voeg elke tekst toe die u wenst
+                    Een verfijnd detail dat de tafelaankleding compleet maakt.
                   </p>
                 </div>
               </motion.div>
@@ -232,7 +240,7 @@ export default function CustomizationSection() {
                   background: "#fff",
                   padding: "2rem",
                   borderRadius: "16px",
-                  boxShadow: "0 4px 20px rgba(0,0,0,0.08)",
+                  boxShadow: "0 4px 20px rgba(205,172,0,0.08)",
                   display: "flex",
                   alignItems: "flex-start",
                   gap: "1.5rem",
@@ -244,27 +252,27 @@ export default function CustomizationSection() {
                   style={{
                     width: "60px",
                     height: "60px",
-                    background: "linear-gradient(135deg, #EC4899 0%, #F43F5E 100%)",
-                    borderRadius: "16px",
+                    borderRadius: "50%",
+                    background: "linear-gradient(135deg, #cdac00 0%, #f0c800 100%)",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
-                    fontSize: "1.8rem",
                     flexShrink: 0,
+                    boxShadow: "0 4px 12px rgba(205, 172, 0, 0.2)",
                   }}
                 >
-                  🎭
+                  <FaGift style={{ fontSize: "1.8rem", color: "#fff" }} />
                 </div>
                 <div>
                   <h3
                     style={{
                       fontSize: "1.3rem",
                       fontWeight: 700,
-                      color: "var(--color-gray-dark)",
+                      color: "#cdac00",
                       marginBottom: "0.5rem",
                     }}
                   >
-                    Ontwerpvrijheid
+                    Luxe verzorging
                   </h3>
                   <p
                     style={{
@@ -274,29 +282,36 @@ export default function CustomizationSection() {
                       margin: 0,
                     }}
                   >
-                    Kleuren, lettertype, lay-out - alles onder uw controle
+                    Een comfortabel en stijlvol detail voor jullie gasten.
                   </p>
                 </div>
               </motion.div>
             </div>
-            <motion.button
-              className="btn-gold"
-              style={{
-                width: "100%",
-                marginTop: "2.5rem",
-                padding: "1.25rem 2.5rem",
-                fontWeight: 700,
-                border: "none",
-                borderRadius: "14px",
-                cursor: "pointer",
-                fontSize: "1.1rem",
-                boxShadow: "0 8px 24px rgba(255, 215, 0, 0.3)",
-              }}
+            <motion.div
               whileHover={{ scale: 1.03, boxShadow: "0 12px 32px rgba(255, 215, 0, 0.5)" }}
               whileTap={{ scale: 0.98 }}
+              style={{ width: "100%", marginTop: "2.5rem" }}
             >
-              Begin Nu Met Uw Ontwerp →
-            </motion.button>
+              <a
+                href="/configurator"
+                style={{
+                  display: "block",
+                  padding: "1.25rem 2.5rem",
+                  fontWeight: 700,
+                  border: "none",
+                  borderRadius: "14px",
+                  cursor: "pointer",
+                  fontSize: "1.1rem",
+                  boxShadow: "0 8px 24px rgba(255, 215, 0, 0.3)",
+                  background: "linear-gradient(90deg, #ffe564 0%, #cdac00 100%)",
+                  color: "#2e2a5b",
+                  textDecoration: "none",
+                  textAlign: "center"
+                }}
+              >
+                Begin nu met uw ontwerp →
+              </a>
+            </motion.div>
           </motion.div>
         </div>
       </div>

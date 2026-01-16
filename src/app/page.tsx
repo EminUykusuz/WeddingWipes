@@ -12,6 +12,7 @@ import FeaturesGrid from '@/components/FeaturesGrid';
 import WhyChooseUs from '@/components/WhyChooseUs';
 import CustomizationSection from '@/components/CustomizationSection';
 import FAQSection from '@/components/FAQSection';
+import Pricelist from '@/components/Pricelist';
 import Footer from '@/components/Footer';
 
 export default function Home() {
@@ -22,10 +23,10 @@ export default function Home() {
       <Hero />
       <ProductShowcase />
       <SolutionsSection />
-      <UsageFeatures />
       <FeaturesGrid />
       <WhyChooseUs />
       <CustomizationSection />
+      <Pricelist />
       <FAQSection />
       <Footer />
     </main>

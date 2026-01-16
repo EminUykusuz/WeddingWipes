@@ -17,7 +17,7 @@
         justifyContent: 'space-between'
       }}>
         <div style={{fontWeight: 700, fontSize: 28, letterSpacing: 1}}>
-          Wypes<span style={{color: 'var(--color-gray-dark)'}}>.nl</span>
+          weddingwipes<span style={{color: 'var(--color-gray-dark)'}}>.nl</span>
         </div>
         <nav style={{display: 'flex', gap: '2rem', alignItems: 'center'}}>
           <a href="#neden" style={{fontWeight: 500, color: 'var(--color-white)', textDecoration: 'none'}}>Neden Wypes?</a>

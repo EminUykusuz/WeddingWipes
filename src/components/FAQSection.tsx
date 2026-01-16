@@ -4,16 +4,20 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const faqs = [
   {
-    question: "Wat is de minimale bestelhoeveelheid?",
-    answer: "Minimaal 1000 stuks per bestelling."
+    question: "Kan ik ook een bestelling nemen onder de 300 stuks?",
+    answer: "Dit is mogelijk, maar de prijs per stuk zal hoger zijn. Neem contact met ons op voor meer informatie."
   },
   {
     question: "Wat is de levertijd?",
     answer: "Standaard 2-4 weken na goedkeuring van uw ontwerp."
   },
   {
-    question: "Kan ik de kleur wijzigen?",
-    answer: "Ja, we bieden alle standaardkleuren en full-color printing aan."
+    question: "Is Weddingwipes alleen voor bruiloften of ook voor andere evenementen?",
+    answer: "Weddingwipes is perfect voor elke gelegenheid! Of het nu gaat om bruiloften, verjaardagen, bedrijfsfeesten of andere speciale evenementen, onze gepersonaliseerde vochtige doekjes voegen een uniek en attent detail toe."
+  },
+  {
+    question: "Is het mogelijk om een tester te ontvangen?",
+    answer: "Ja, we bieden testers aan zodat u de kwaliteit van onze producten kunt beoordelen voordat u een grotere bestelling plaatst. (Let op: deze zijn niet gepersonaliseerd.) Neem contact met ons op om een tester aan te vragen."
   }
 ];
 
@@ -110,20 +114,6 @@ export default function FAQSection() {
               </AnimatePresence>
             </motion.div>
           ))}
-        </div>
-        <div style={{ textAlign: 'center', marginTop: '3rem' }}>
-          <a href="https://wa.me/31627141526?text=Hallo%20Wedding%20Wipes%20ik%20wil%20graag%20meer%20informatie" target="_blank" rel="noopener noreferrer" className="btn-gold" style={{
-            padding: '1rem 2.5rem',
-            fontWeight: 600,
-            border: 'none',
-            borderRadius: '8px',
-            cursor: 'pointer',
-            fontSize: '1rem',
-            textDecoration: 'none',
-            display: 'inline-block'
-          }}>
-            Neem Contact Op
-          </a>
         </div>
       </div>
     </section>

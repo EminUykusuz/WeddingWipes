@@ -16,15 +16,12 @@ export default function Hero() {
   };
 
   return (
-    <section style={{
+    <section className="hero-section" style={{
       backgroundImage: 'url(/hero.png)',
       backgroundSize: 'cover',
       backgroundPosition: 'center',
       backgroundRepeat: 'no-repeat',
-      color: '#fff',
-      padding: '4rem 1rem 8rem',
-      position: 'relative',
-      overflow: 'hidden'
+      color: '#fff'
     }}>
       {/* Dark Overlay */}
       <div style={{
@@ -64,7 +61,7 @@ export default function Hero() {
             }}
             whileHover={{ scale: 1.05 }}
           >
-            WYPES ✓
+            Weddingwipes ✓
           </motion.div>
           <motion.h1
             style={{
@@ -76,7 +73,7 @@ export default function Hero() {
             }}
             variants={fadeInUp}
           >
-                        Luxe vochtige doekjes met uw logo
+                        Luxe vochtige doekjes, perfect voor jouw bruiloft!
           </motion.h1>
           <motion.p
             style={{
@@ -88,7 +85,7 @@ export default function Hero() {
             }}
             variants={fadeInUp}
           >
-            Bedrukte verfris doekjes, fris, hygiënisch en opvallend. Perfect geschenk voor bruiloften en evenementen.
+            Weddingwipes, bedrukt met jullie namen en een persoonlijke boodschap.
           </motion.p>
           <motion.a
             href="https://wa.me/31627141526?text=Hallo%20Wedding%20Wipes%20ik%20wil%20graag%20meer%20informatie"
@@ -108,7 +105,7 @@ export default function Hero() {
             whileHover={{ scale: 1.05, boxShadow: '0 8px 20px rgba(46, 42, 91, 0.4), 0 4px 12px rgba(163, 196, 76, 0.3)' }}
             whileTap={{ scale: 0.95 }}
           >
-            Neem Contact Op
+            Neem contact op
           </motion.a>
         </motion.div>
       </div>
