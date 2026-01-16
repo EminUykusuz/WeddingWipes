@@ -6,7 +6,7 @@ export default function FeaturesGrid() {
   return (
     <section style={{ padding: 'clamp(2rem, 5vw, 5rem) clamp(1rem, 3vw, 1.5rem)', background: '#f9f9f9' }}>
       <div className="container" style={{ maxWidth: '1400px', margin: '0 auto', width: '100%' }}>
-        <div className="features-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: 'clamp(0.5rem, 2vw, 1rem)' }}>
+        <div className="features-grid" style={{ gap: 'clamp(0.5rem, 2vw, 1rem)' }}>
           <div style={{
             textAlign: 'center',
             padding: 'clamp(1rem, 2vw, 1.25rem)',

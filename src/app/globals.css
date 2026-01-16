@@ -209,7 +209,20 @@ img, video, svg {
 }
 
 /* Features grid helpers */
-.features-grid { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+.features-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(0.5rem, 2vw, 1rem);
+}
+
+/* Prevent 3-up layout on tablet portrait: force even splits */
+@media (min-width: 600px) and (max-width: 1024px) {
+  .features-grid { grid-template-columns: repeat(2, 1fr); gap: clamp(0.75rem, 2.2vw, 1.5rem); }
+}
+
+@media (min-width: 1025px) {
+  .features-grid { grid-template-columns: repeat(4, 1fr); gap: clamp(1rem, 2.5vw, 2rem); }
+}
 
 /* Customization image: prevent heavy cropping/zoom on mobile */
 .custom-image {
