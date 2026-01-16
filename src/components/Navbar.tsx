@@ -49,22 +49,24 @@ export default function Navbar() {
         justifyContent: 'space-between'
       }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-          <img
-            src="/logo.jpg"
-            alt="Wedding Wypes Logo"
-            className="site-logo"
-            style={{
-              width: 'auto',
-              objectFit: 'contain',
-              borderRadius: '8px'
-            }}
-          />
+          <a href="/" style={{ display: 'inline-block' }}>
+            <img
+              src="/logo.jpg"
+              alt="Wedding Wypes Logo"
+              className="site-logo"
+              style={{
+                width: 'auto',
+                objectFit: 'contain',
+                borderRadius: '8px'
+              }}
+            />
+          </a>
         </div>
 
         {/* Desktop Menu */}
         <div className="mobile-hidden" style={{ display: 'flex', alignItems: 'center', gap: '3rem' }}>
           <a 
-            href="#products" 
+            href="/#products" 
             style={linkStyle('products')}
             onMouseEnter={() => setHoveredLink('products')}
             onMouseLeave={() => setHoveredLink(null)}
@@ -72,7 +74,7 @@ export default function Navbar() {
             Producten
           </a>
           <a 
-            href="#solutions" 
+            href="/#solutions" 
             style={linkStyle('solutions')}
             onMouseEnter={() => setHoveredLink('solutions')}
             onMouseLeave={() => setHoveredLink(null)}
@@ -80,7 +82,7 @@ export default function Navbar() {
             Oplossingen
           </a>
           <a 
-            href="#why" 
+            href="/#why" 
             style={linkStyle('why')}
             onMouseEnter={() => setHoveredLink('why')}
             onMouseLeave={() => setHoveredLink(null)}
@@ -88,7 +90,7 @@ export default function Navbar() {
             Waarom wij
           </a>
           <a 
-            href="#faq" 
+            href="/#faq" 
             style={linkStyle('faq')}
             onMouseEnter={() => setHoveredLink('faq')}
             onMouseLeave={() => setHoveredLink(null)}
@@ -142,7 +144,7 @@ export default function Navbar() {
           }}
         >
           <a 
-            href="#products" 
+            href="/#products" 
             onClick={() => setMobileMenuOpen(false)}
             style={{
               color: '#2e2a5b',
@@ -155,7 +157,7 @@ export default function Navbar() {
             Producten
           </a>
           <a 
-            href="#solutions" 
+            href="/#solutions" 
             onClick={() => setMobileMenuOpen(false)}
             style={{
               color: '#2e2a5b',
@@ -168,7 +170,7 @@ export default function Navbar() {
             Oplossingen
           </a>
           <a 
-            href="#why" 
+            href="/#why" 
             onClick={() => setMobileMenuOpen(false)}
             style={{
               color: '#2e2a5b',
@@ -181,7 +183,7 @@ export default function Navbar() {
             Waarom Wij
           </a>
           <a 
-            href="#faq" 
+            href="/#faq" 
             onClick={() => setMobileMenuOpen(false)}
             style={{
               color: '#2e2a5b',
